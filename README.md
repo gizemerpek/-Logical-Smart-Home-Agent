@@ -7,7 +7,8 @@ logic. The agent operates in a smart home context, interpreting natural language
 commands from the user and translating them into executable actions. This task 
 involves building a rule-based reasoning system that accepts both predefined and 
 dynamically generated facts and rules. 
-3. System Overview 
+
+2. System Overview 
 
 The agent has been developed in Python and consists of two main components: 
 • LogicalAgent Class: Manages a set of facts and rules, and evaluates which 
@@ -25,6 +26,7 @@ The system workflow is as follows:
 3. Logical Constructs and Implementation
    
 3.1 Fact and Rule Representation 
+
 Facts are stored in a set and rules are stored in a dictionary. Each rule follows the 
 format: 
 <condition> -> <action> 
@@ -33,9 +35,11 @@ The agent supports logical constructs such as AND and OR in both:
 • Actions (RHS)
 
 <img width="663" height="397" alt="image" src="https://github.com/user-attachments/assets/ee2472d2-d683-4c47-b7e1-2ccd52978493" />
+
 This enables complex rule configurations to be represented and evaluated. 
 
 3.2 Input Processing and LLM Integration 
+
 The process_natural_input() function maps natural language inputs into logical facts. 
 Simple mappings are handled using keyword checks, while more complex expressions 
 can be processed using the Gemini API. 
@@ -62,7 +66,7 @@ can be processed using the Gemini API.
 The rules reflect real-world automation behavior and use AND/OR operators 
 extensively.
 
-6. Logical Evaluation Strategy
+5. Logical Evaluation Strategy
    
 The agent evaluates facts using the following logic: 
 • AND condition: All sub-facts must be present in the knowledge base. 
@@ -71,7 +75,7 @@ The agent evaluates facts using the following logic:
 • OR action: Only the first available action is executed. 
 This logic mimics basic reasoning mechanisms similar to expert systems. 
 
-8. Contributions and Novelty
+6. Contributions and Novelty
    
 • Advanced Rule Handling: The system supports compound logical expressions, 
 enabling real-world automation rules. 
@@ -80,7 +84,7 @@ both rule-based and LLM-based approaches.
 • Modular Design: The logical agent is extendable and can be integrated into 
 broader smart home systems. 
 
-10. Conclusion
+7. Conclusion
     
 This project successfully implements a rule-based logical agent capable of interpreting 
 natural user commands and executing smart home actions accordingly. The system 
